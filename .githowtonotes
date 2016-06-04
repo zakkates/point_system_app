@@ -1,0 +1,12 @@
+ls = list files
+cd = change directory
+ls -al = list all files
+touch .test = creates a file in the directory called .test
+git init = initializes git in a directory
+pico .test = opens up the .test file in the pico file editor
+cat .test = shows the contents of the file
+command X, then press Y to save, then Enter to confirm saving changes to document
+git add —all = adds all files of a directory to git (git commit)
+git status = shows us the status of what we just did
+when you commit you’re saving a version of all your files
+git commit -m “Initial Commit” = 
