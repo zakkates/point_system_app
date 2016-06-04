@@ -9,4 +9,16 @@ command X, then press Y to save, then Enter to confirm saving changes to documen
 git add —all = adds all files of a directory to git (git commit)
 git status = shows us the status of what we just did
 when you commit you’re saving a version of all your files
-git commit -m “Initial Commit” = 
+git commit -m “Initial Commit” 
+
+STEP 1
+git add -all
+
+STEP 2
+git commit -m “Commit Version”
+
+STEP 3
+git remote add origin https://github.com/zakkates/point_system_app
+
+STEP 4
+git push -u origin master
