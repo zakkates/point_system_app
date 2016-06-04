@@ -22,3 +22,7 @@ git remote add origin https://github.com/zakkates/point_system_app
 
 STEP 4
 git push -u origin master
+
+You can skip #3 if you already set it up
+Step 4 doesn’t require “origin master” after you already set it up
+Always requires a login.
