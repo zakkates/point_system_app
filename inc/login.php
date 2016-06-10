@@ -28,6 +28,7 @@
             VALUES( ? ,'".md5(md5($newEmail).$_POST['password'])."')");
 			$result->execute(array($newEmail)); 
 			$_SESSION['id']=$db->lastInsertId();
+            setcookie("id",$_SESSION['id'],time()+60*60*24*14);
 			header("Location:profile.php");
 		}
 	} 
@@ -50,6 +51,7 @@
 
 		if ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 			$_SESSION['id']=$row['parent_id'];
+            setcookie("id",$_SESSION['id'],time()+60*60*24*14);
 			header("Location:points.php");
 		} else {
 			$loginerror = "Your email and password did not match any records in the database. Please try again.";
@@ -59,4 +61,5 @@
 	}
 	
 	
-?>
+?>            
+		

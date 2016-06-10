@@ -145,7 +145,17 @@ table.points-table {
 }
 table.points-table tr td, table.points-table tr th {
     padding: 5px;
+    min-width: 78px;
 }
+span.parent-circle {
+    border: solid 1px;
+    border-radius: 25px;
+    padding: 3px 5px;
+    line-height: 1em;
+    display: inline-block;
+    font-size: .8em;
+}
+
 
 span.total-points {
     padding: 15px 8px; 

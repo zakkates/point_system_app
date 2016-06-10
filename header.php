@@ -1,5 +1,5 @@
 <?php   
-session_start(); 
+session_start();
 if (!$_SESSION['id'] && $_SERVER['REQUEST_URI'] != '/point-system/index.php') { header("Location:index.php"); exit; }
 require_once("connection.php");
 include('inc/user-data.php');
@@ -10,6 +10,8 @@ include('inc/user-data.php');
 <head>
     <title>Earn Points!</title>
     <link rel='stylesheet' id='theme-style-css'  href='style.css?ver=1.0' type='text/css' media='all' /> 
+    <link rel="apple-touch-icon" href="images/home-icon.jpg" />
+    <link rel="apple-touch-startup-image" href="images/startup-icon.png">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;" > 
     <script type='text/javascript' src='https://code.jquery.com/jquery-1.12.3.min.js?ver=1.12'></script>
     <script type='text/javascript' src='https://code.jquery.com/jquery-migrate-1.2.1.min.js?ver=1.2.1'></script>
@@ -20,7 +22,7 @@ include('inc/user-data.php');
 <?php if ($_SESSION['id']): ?>
 <header>
     <div class="container">
-        <span class="login-id">Welcome <?php echo $user_data['parent_first_name'] ?>, ID: <?php if ($_SESSION) {echo $_SESSION['id']; }  ?></span>
+        <span class="login-id">Welcome <?php echo $user_data['parent_first_name'] ?>, ID: <?php if ($_SESSION) {echo $_SESSION['id'] . "-" . $_COOKIE['id'];}  ?></span>
     <nav>
         <ul>
             <?php if ($_SESSION): ?>

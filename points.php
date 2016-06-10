@@ -90,13 +90,16 @@ if ($_GET['child_id']) { ?>
     echo 'Total Points: ' . $total_points . '</span>'; 
     #List out points
     if ($results_points_array):
-            $output .= '<table class="points-table"><tr><th>Points</th><th>Activity</th><th>Parent</th><th>Delete</th></tr>';
+            $output .= '<table class="points-table"><tr><th>Date</th><th>Parent</th><th>Activity</th><th>Points</th></tr>';
             foreach ($results_points_array as $row) {
+                if ($row['points_date'] != null) { $date = date('M j', strtotime($row['points_date'])); } else {$date = "";}
                 $output .= "<tr>";
-                $output .= "<td>" . $row['points'] . "</td>";
+                #strtodate manual: http://php.net/manual/en/function.date.php
+                $output .= "<td>".$date." <a href='?child_id=".$child_id."&delete_points_id=" . $row['points_id'] . "'>x</a></td>";
+                $output .= '<td><span class="parent-circle" title="'.$row['parent_first_name'].' '.$row['parent_last_name'].'">' . substr($row['parent_first_name'],0,1) . '</span></td>';
                 $output .= "<td>" . $row['points_activity'] . "</td>";
-                $output .= "<td>" . $row['parent_first_name'] . "</td>";
-                $output .= "<td><a href='?child_id=".$child_id."&delete_points_id=" . $row['points_id'] . "'>x</a></td>";
+                $output .= "<td>" . $row['points'] . "</td>";
+                
                 $output .= "</tr>";
             }
             $output .= "</table>";
