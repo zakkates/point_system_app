@@ -1,5 +1,6 @@
 <?php   
 session_start();
+if ($_COOKIE['id']) { $_SESSION['id'] = $_COOKIE['id']; }
 if (!$_SESSION['id'] && $_SERVER['REQUEST_URI'] != '/point-system/index.php') { header("Location:index.php"); exit; }
 require_once("connection.php");
 include('inc/user-data.php');

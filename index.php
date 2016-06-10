@@ -1,6 +1,7 @@
 <?php 
 
     session_start(); 
+	if ($_COOKIE['id']) { $_SESSION['id'] = $_COOKIE['id']; }
     if ($_SESSION['id']) { header("Location:points.php"); }
     include('inc/logout.php');
 	include("inc/login.php"); 
