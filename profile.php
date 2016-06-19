@@ -21,8 +21,7 @@
 
 
 <form method="post">
-    <label for="parent_id">Parent ID: </label>
-	<input style=" " type="text" name="parent_id" id="parent_id" value="<?php echo addslashes($row["parent_id"]); ?>"/><br />
+    <label for="parent_id">Parent ID: </label><?php echo addslashes($row["parent_id"]); ?><br />
 	<label for="parent_first_name">First Name: </label>
 	<input type="text" name="parent_first_name" id="parent_first_name" value="<?php echo $row['parent_first_name']; ?>"/><br />
 	<label for="parent_last_name">Last Name: </label>

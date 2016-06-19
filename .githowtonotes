@@ -6,7 +6,7 @@ git init = initializes git in a directory
 pico .test = opens up the .test file in the pico file editor
 cat .test = shows the contents of the file
 command X, then press Y to save, then Enter to confirm saving changes to document
-git add —all = adds all files of a directory to git (git commit)
+git add -—all = adds all files of a directory to git (git commit)
 git status = shows us the status of what we just did
 when you commit you’re saving a version of all your files
 git commit -m “Initial Commit” 
@@ -17,7 +17,7 @@ git add -all
 STEP 2
 git commit -m “Commit Version”
 
-STEP 3
+STEP 3 (create path in GitHub first)
 git remote add origin https://github.com/zakkates/point_system_app
 
 STEP 4
